@@ -54,9 +54,10 @@ class PartyTestsDatabase(unittest.TestCase):
         db.drop_all()
 
     def test_games(self):
+        """Test that game is appearing on the page."""
 
         result = self.client.get('/games')
-        self.assertIn(b"Cats", result.data)
+        self.assertIn(b'Cats', result.data)
 
 
 
